@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\varoo\\bjdemomonday\\blackjack-app\\blackjack-app.csproj": {}
+    "C:\\Users\\varoo\\newfolder\\bjdemomonday\\blackjack-app\\blackjack-app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\varoo\\bjdemomonday\\blackjack-app\\blackjack-app.csproj": {
+    "C:\\Users\\varoo\\newfolder\\bjdemomonday\\blackjack-app\\blackjack-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\varoo\\bjdemomonday\\blackjack-app\\blackjack-app.csproj",
+        "projectUniqueName": "C:\\Users\\varoo\\newfolder\\bjdemomonday\\blackjack-app\\blackjack-app.csproj",
         "projectName": "blackjack-app",
-        "projectPath": "C:\\Users\\varoo\\bjdemomonday\\blackjack-app\\blackjack-app.csproj",
+        "projectPath": "C:\\Users\\varoo\\newfolder\\bjdemomonday\\blackjack-app\\blackjack-app.csproj",
         "packagesPath": "C:\\Users\\varoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\varoo\\bjdemomonday\\blackjack-app\\obj\\",
+        "outputPath": "C:\\Users\\varoo\\newfolder\\bjdemomonday\\blackjack-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

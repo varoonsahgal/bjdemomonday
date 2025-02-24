@@ -21,7 +21,10 @@ public class Game
     {
         deck.Shuffle();
         DealInitialCards();
-        DisplayHands();
+        DisplayInitialHands();
+        PlayerTurn();
+        DealerTurn();
+        DetermineOutcome();
         // Game loop logic will go here
     }
 
@@ -31,6 +34,20 @@ public class Game
         player.AddCard(deck.DrawCard());
         dealer.AddCard(deck.DrawCard());
         dealer.AddCard(deck.DrawCard());
+    }
+
+    private void DisplayInitialHands()
+    {
+        Console.WriteLine("Player's Hand:");
+        foreach (var card in player.Hand)
+        {
+            Console.WriteLine(card.ToString());
+        }
+        Console.WriteLine($"Total Value: {player.CalculateHandValue()}");
+
+        Console.WriteLine("\nDealer's Hand:");
+        Console.WriteLine(dealer.Hand[0].ToString());
+        Console.WriteLine("Hidden Card");
     }
 
     private void DisplayHands()
@@ -48,6 +65,82 @@ public class Game
             Console.WriteLine(card.ToString());
         }
         Console.WriteLine($"Total Value: {dealer.CalculateHandValue()}");
+    }
+
+    private void PlayerTurn()
+    {
+        while (true)
+        {
+            Console.WriteLine("Do you want to (H)it or (S)tand?");
+            string choice = Console.ReadLine().ToUpper();
+
+            if (choice == "H")
+            {
+                player.AddCard(deck.DrawCard());
+                Console.WriteLine("Player's Hand:");
+                foreach (var card in player.Hand)
+                {
+                    Console.WriteLine(card.ToString());
+                }
+                Console.WriteLine($"Total Value: {player.CalculateHandValue()}");
+
+                if (player.CalculateHandValue() > 21)
+                {
+                    Console.WriteLine("Player busts! Dealer wins.");
+                    return;
+                }
+            }
+            else if (choice == "S")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Please choose (H)it or (S)tand.");
+            }
+        }
+    }
+
+    private void DealerTurn()
+    {
+        while (dealer.CalculateHandValue() < 17)
+        {
+            dealer.AddCard(deck.DrawCard());
+        }
+        Console.WriteLine("\nDealer's Final Hand:");
+        foreach (var card in dealer.Hand)
+        {
+            Console.WriteLine(card.ToString());
+        }
+        Console.WriteLine($"Total Value: {dealer.CalculateHandValue()}");
+    }
+
+    private void DetermineOutcome()
+    {
+        int playerValue = player.CalculateHandValue();
+        int dealerValue = dealer.CalculateHandValue();
+
+        Console.WriteLine("\nGame Outcome:");
+        if (playerValue > 21)
+        {
+            Console.WriteLine("Player busts! Dealer wins.");
+        }
+        else if (dealerValue > 21)
+        {
+            Console.WriteLine("Dealer busts! Player wins.");
+        }
+        else if (playerValue > dealerValue)
+        {
+            Console.WriteLine("Player wins!");
+        }
+        else if (dealerValue > playerValue)
+        {
+            Console.WriteLine("Dealer wins!");
+        }
+        else
+        {
+            Console.WriteLine("It's a tie!");
+        }
     }
 
     // Additional game logic methods will go here

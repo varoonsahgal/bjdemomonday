@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("blackjack-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e3689a0e571dd58fd4ed963a5a2f5d4d4d178f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("blackjack-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("blackjack-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
