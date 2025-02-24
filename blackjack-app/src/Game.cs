@@ -38,32 +38,22 @@ public class Game
 
     private void DisplayInitialHands()
     {
-        Console.WriteLine("Player's Hand:");
-        foreach (var card in player.Hand)
-        {
-            Console.WriteLine(card.ToString());
-        }
+        Console.WriteLine("\nPlayer's Hand:");
+        CardDisplay.DisplayCardRow(player.Hand.ToArray());
         Console.WriteLine($"Total Value: {player.CalculateHandValue()}");
 
         Console.WriteLine("\nDealer's Hand:");
-        Console.WriteLine(dealer.Hand[0].ToString());
-        Console.WriteLine("Hidden Card");
+        CardDisplay.DisplayCardRow(dealer.Hand.ToArray(), new[] { false, true });
     }
 
     private void DisplayHands()
     {
-        Console.WriteLine("Player's Hand:");
-        foreach (var card in player.Hand)
-        {
-            Console.WriteLine(card.ToString());
-        }
+        Console.WriteLine("\nPlayer's Hand:");
+        CardDisplay.DisplayCardRow(player.Hand.ToArray());
         Console.WriteLine($"Total Value: {player.CalculateHandValue()}");
 
         Console.WriteLine("\nDealer's Hand:");
-        foreach (var card in dealer.Hand)
-        {
-            Console.WriteLine(card.ToString());
-        }
+        CardDisplay.DisplayCardRow(dealer.Hand.ToArray());
         Console.WriteLine($"Total Value: {dealer.CalculateHandValue()}");
     }
 
@@ -71,17 +61,14 @@ public class Game
     {
         while (true)
         {
-            Console.WriteLine("Do you want to (H)it or (S)tand?");
+            Console.WriteLine("\nDo you want to (H)it or (S)tand?");
             string choice = Console.ReadLine().ToUpper();
 
             if (choice == "H")
             {
                 player.AddCard(deck.DrawCard());
-                Console.WriteLine("Player's Hand:");
-                foreach (var card in player.Hand)
-                {
-                    Console.WriteLine(card.ToString());
-                }
+                Console.WriteLine("\nPlayer's Hand:");
+                CardDisplay.DisplayCardRow(player.Hand.ToArray());
                 Console.WriteLine($"Total Value: {player.CalculateHandValue()}");
 
                 if (player.CalculateHandValue() > 21)
@@ -108,10 +95,7 @@ public class Game
             dealer.AddCard(deck.DrawCard());
         }
         Console.WriteLine("\nDealer's Final Hand:");
-        foreach (var card in dealer.Hand)
-        {
-            Console.WriteLine(card.ToString());
-        }
+        CardDisplay.DisplayCardRow(dealer.Hand.ToArray());
         Console.WriteLine($"Total Value: {dealer.CalculateHandValue()}");
     }
 
