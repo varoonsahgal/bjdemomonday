@@ -1,0 +1,14 @@
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.AssemblyInfoInputs.cache
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.AssemblyInfo.cs
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.csproj.CoreCompileInputs.cache
+C:\Users\varoo\bjdemomonday\blackjack-app\bin\Debug\net6.0\blackjack-app.exe
+C:\Users\varoo\bjdemomonday\blackjack-app\bin\Debug\net6.0\blackjack-app.deps.json
+C:\Users\varoo\bjdemomonday\blackjack-app\bin\Debug\net6.0\blackjack-app.runtimeconfig.json
+C:\Users\varoo\bjdemomonday\blackjack-app\bin\Debug\net6.0\blackjack-app.dll
+C:\Users\varoo\bjdemomonday\blackjack-app\bin\Debug\net6.0\blackjack-app.pdb
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.dll
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\refint\blackjack-app.dll
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.pdb
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\blackjack-app.genruntimeconfig.cache
+C:\Users\varoo\bjdemomonday\blackjack-app\obj\Debug\net6.0\ref\blackjack-app.dll
